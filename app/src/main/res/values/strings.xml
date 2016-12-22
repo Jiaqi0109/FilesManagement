@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FilesManagement</string>
+    <string name="Login">Login</string>
+    <string name="sign_in">登录</string>
+    <string name="sign_up">注册</string>
+    <string name="sign_out">登出</string>
+    <string name="user">用户名：</string>
+    <string name="pw">&#160;密&#160;&#160;码&#160;：</string>
+    <string name="username">请输入你的学号</string>
+    <string name="pwname">请输入你的密码</string>
+    <string name="signup_pw1">密码不少于6位</string>
+    <string name="signup_pw2">请确认你的密码</string>
+</resources>
