@@ -23,6 +23,18 @@ public class MainLogin extends Activity {
         textuser = (TextView) findViewById(R.id.username);
         textpw = (TextView) findViewById(R.id.pwname);
         /*
+         *  登录按钮跳转
+         */
+        btin = (Button) findViewById(R.id.sign_in);
+        btin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainLogin.this, Administrator.class);
+                startActivity(intent);
+            }
+        });
+
+        /*
          *  注册按钮跳转
          */
         btup = (Button) findViewById(R.id.sign_up);
@@ -35,7 +47,7 @@ public class MainLogin extends Activity {
         });
     }
     /*
-     *  接收回传数据
+     *  接收注册页面回传数据
      */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -43,10 +55,13 @@ public class MainLogin extends Activity {
         if (requestCode == 1&& resultCode == 2){
             String content = data.getStringExtra("data");
             textuser.setText(content);
-            Toast.makeText(getApplicationContext(), "Sign-up Success", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Sign-up Success!", Toast.LENGTH_LONG).show();
 
         }
 
     }
+
+
+
 }
 

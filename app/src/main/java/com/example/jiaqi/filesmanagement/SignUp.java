@@ -30,17 +30,20 @@ public class SignUp extends AppCompatActivity {
         btsg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (textpw2.getText().toString().trim().equals(textpw1.getText().toString().trim())) {
+                if (textuser.getText().length() == 0 || textpw1.getText().length() == 0 || textpw2.getText().length() == 0){
+                    Toast.makeText(getApplicationContext(), "ERROR!", Toast.LENGTH_LONG).show();
+                    textuser.setText("");
+                    textpw1.setText("");
+                    textpw2.setText("");
+                }
+                else if (textpw2.getText().toString().trim().equals(textpw1.getText().toString().trim())) {
                     Intent data = new Intent();
                     data.putExtra("data", textuser.getText().toString());
                     setResult(2, data);
-                /*
-                 *  结束此页面
-                 */
-                    finish();
+                    finish();               //结束此页面
                 }
                 else{
-                    Toast.makeText(getApplicationContext(), "Sign-up Fault", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Sign-up Fault!", Toast.LENGTH_LONG).show();
                     textpw1.setText("");
                     textpw2.setText("");
                 }
