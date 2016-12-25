@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main2"
     android:layout_width="match_parent"
@@ -13,77 +14,367 @@
     tools:context="com.example.jiaqi.filesmanagement.Administrator2">
 
 
-    <Button
-        android:text="Button"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/main2_button1"
-        android:gravity="center"
-        android:layout_below="@+id/main2_text2"
-        android:layout_alignParentRight="true" />
-    <TextView
-        android:text="姓名："
-        android:layout_width="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_alignParentLeft="true"
-        android:textSize="25sp"
-        android:id="@+id/main2_text3"
-        />
-    <EditText
-
-        android:hint="请输入姓名"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@id/main2_text3"
-        android:textSize="25sp"
-        android:id="@+id/main2_text1" />
-    <EditText
-
-        android:hint="请输入姓名"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:layout_below="@+id/main2_button1"
-        android:id="@+id/main2_text4" />
-
-
-    <Spinner
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/main2_text1"
-        android:id="@+id/spinner" />
-    <TextView
-        android:text="性别"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/main2_text2"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:layout_below="@+id/main2_text1"
-        android:layout_centerHorizontal ="true" />
-    <Button
-        android:text="编辑"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/main2_button2"
-        android:gravity="center"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true" />
-    <Button
-        android:text="确定"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/main2_button3"
-        android:layout_alignParentRight="true"
-        android:gravity="center"
-        android:layout_alignParentBottom="true" />
+        android:layout_height="match_parent">
 
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:srcCompat="@drawable/backsignup"
+                    android:id="@+id/Spic"
+                    android:layout_weight="2" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:inputType="textPersonName"
+                    android:hint="Name"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:id="@+id/Sname"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="&#160;&#160;学&#160;&#160;&#160;&#160;号&#160;&#160;:"
+                        android:id="@+id/snumber"
+                        android:gravity="center"
+                        android:layout_weight="2" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:id="@+id/Snumber"
+                        android:layout_weight="3" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ssex"
+                        android:text="&#160;&#160;性&#160;&#160;&#160;&#160;别&#160;&#160;:"
+                        android:gravity="center"
+                        android:layout_weight="2" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:id="@+id/Ssex"
+                        android:layout_weight="3" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sage"
+                        android:text="&#160;&#160;年&#160;&#160;&#160;&#160;龄&#160;&#160;:"
+                        android:gravity="center"
+                        android:layout_weight="2" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:id="@+id/Sage"
+                        android:layout_weight="3" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sgrade"
+                        android:text="&#160;&#160;年&#160;&#160;&#160;&#160;级&#160;&#160;:"
+                        android:gravity="center"
+                        android:layout_weight="2" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:id="@+id/Sgrade"
+                        android:layout_weight="3" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/snation"
+                        android:text="&#160;&#160;民&#160;&#160;&#160;&#160;族&#160;&#160;:"
+                        android:gravity="center"
+                        android:layout_weight="2" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:id="@+id/Snation"
+                        android:layout_weight="3" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sborn"
+                    android:text="出生年月:"
+                    android:gravity="center"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:id="@+id/Sborn"
+                    android:layout_weight="2" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sid"
+                    android:text="身份证号:"
+                    android:gravity="center"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:id="@+id/Sid"
+                    android:layout_weight="2" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sface"
+                    android:text="政治面貌:"
+                    android:gravity="center"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:id="@+id/Sface"
+                    android:layout_weight="2" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sacadmy"
+                    android:text="&#160;&#160;学&#160;&#160;&#160;&#160;院&#160;&#160;:"
+                    android:gravity="center"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:id="@+id/Sacadmy"
+                    android:layout_weight="2" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/shome"
+                    android:text="&#160;&#160;住&#160;&#160;&#160;&#160;址&#160;&#160;:"
+                    android:gravity="center"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:id="@+id/Shome"
+                    android:layout_weight="2" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sdata"
+                    android:text="注册日期:"
+                    android:gravity="center"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:id="@+id/Sdata"
+                    android:layout_weight="2" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:text="编辑"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/Sedit"
+                android:gravity="center"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/text_white"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="确定"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/Sok"
+                android:gravity="center"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/text_white"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="删除"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/Sdelete"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/text_white"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 
 </RelativeLayout>

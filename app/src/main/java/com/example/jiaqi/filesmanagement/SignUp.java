@@ -4,16 +4,28 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SignUp extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+import static android.R.id.list;
+
+public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private Button btsg;
+    private List<String> list;
     private TextView textuser;
     private TextView textpw1;
     private TextView textpw2;
+    private TextView textView;
+    private Spinner spinner;
+    private ArrayAdapter<String> arrayAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,5 +62,30 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
+        /*
+         * Spinner选择学号年份
+         */
+        textView = (TextView)findViewById(R.id.textView);
+        spinner = (Spinner)findViewById(R.id.s2014);
+        list=new ArrayList<String>();
+        list.add("2014");
+        list.add("2015");
+        list.add("2013");
+        list.add("2012");
+        list.add("校外");
+
+        arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,list);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(arrayAdapter);
+        spinner.setOnItemSelectedListener(this);
     }
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+    }
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+    }
+    /*
+     * Spinner结束
+     */
 }
