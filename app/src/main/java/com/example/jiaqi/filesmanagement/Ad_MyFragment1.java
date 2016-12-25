@@ -33,8 +33,8 @@ public class Ad_MyFragment1 extends ListFragment {
 
     public void onCreate(Bundle savedInstanceState) {
 
-        final String[] from = new String[] {"姓名", "学号","学院"};
-        final int[] to = new int[] {R.id.text1, R.id.text2,R.id.text3};
+        final String[] from = new String[] {"姓名", "学号"};
+        final int[] to = new int[] {R.id.text1, R.id.text2};
         super.onCreate(savedInstanceState);
         SimpleAdapter adapter = new SimpleAdapter(
                 this.getActivity(), getSimpleData(),
@@ -61,19 +61,16 @@ public class Ad_MyFragment1 extends ListFragment {
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("姓名", "张三");
         map.put("学号", "001");
-        map.put("学院", "计科");
         list.add(map);
 
         map = new HashMap<String, Object>();
         map.put("姓名", "李四");
         map.put("学号", "002");
-        map.put("学院", "计科");
         list.add(map);
 
         map = new HashMap<String, Object>();
         map.put("姓名", "王五");
         map.put("学号", "003");
-        map.put("学院", "计科");
         list.add(map);
 
         return list;

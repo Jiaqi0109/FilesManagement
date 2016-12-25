@@ -1,13 +1,39 @@
 <resources>
     <string name="app_name">FilesManagement</string>
     <string name="Login">Login</string>
-    <string name="sign_in">登录</string>
-    <string name="sign_up">注册</string>
-    <string name="sign_out">登出</string>
+    <string name="sign_in">&#160;登&#160;&#160;录&#160;</string>
+    <string name="sign_up">&#160;注&#160;&#160;册&#160;</string>
+    <string name="sign_out">&#160;登&#160;&#160;出&#160;</string>
     <string name="user">用户名：</string>
     <string name="pw">&#160;密&#160;&#160;码&#160;：</string>
     <string name="username">请输入你的学号</string>
     <string name="pwname">请输入你的密码</string>
     <string name="signup_pw1">密码不少于6位</string>
     <string name="signup_pw2">请确认你的密码</string>
+
+    <string-array name="action_images">
+        <item>@drawable/pic1</item>
+        <item>@drawable/pic2</item>
+        <item>@drawable/pic3</item>
+        <item>@drawable/m1</item>
+        <item>@drawable/m2</item>
+        <item>@drawable/m3</item>
+        <item>@drawable/m4</item>
+        <item>@drawable/m5</item>
+        <item>@drawable/m6</item>
+        <item>@drawable/m7</item>
+        <item>@drawable/m8</item>
+        <item>@drawable/m9</item>
+        <item>@drawable/m10</item>
+        <item>@drawable/w1</item>
+        <item>@drawable/w2</item>
+        <item>@drawable/w3</item>
+        <item>@drawable/w4</item>
+        <item>@drawable/w5</item>
+        <item>@drawable/w6</item>
+        <item>@drawable/w7</item>
+        <item>@drawable/w8</item>
+        <item>@drawable/w9</item>
+        <item>@drawable/w10</item>
+    </string-array>
 </resources>
