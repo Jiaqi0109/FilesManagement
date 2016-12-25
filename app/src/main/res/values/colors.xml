@@ -8,4 +8,5 @@
     <color name="text_blue">#3F51B5</color>
     <color name="text_white">#FFFFFF</color>
     <color name="text_lv">#00FF00</color>
+    <color name="fragment_background">#6c92ea</color>
 </resources>

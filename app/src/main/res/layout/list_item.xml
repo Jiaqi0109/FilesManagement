@@ -10,15 +10,22 @@
 
         <TextView
             android:id="@+id/text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
             android:textSize="@dimen/text_size"
+            android:textColor="#f2ff00"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_weight="2"
             />
         <TextView
             android:id="@+id/text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
             android:textSize="@dimen/text_size"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:textColor="#ffffff"
             />
 
     </LinearLayout>
