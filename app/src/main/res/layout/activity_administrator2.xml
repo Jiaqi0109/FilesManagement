@@ -169,18 +169,17 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:id="@+id/snation"
+
                         android:text="&#160;&#160;民&#160;&#160;&#160;&#160;族&#160;&#160;:"
                         android:gravity="center"
-                        android:layout_weight="2" />
+                        android:layout_weight="2"/>
 
-                    <EditText
+                    <Spinner
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:inputType="textPersonName"
-                        android:ems="10"
-                        android:gravity="center"
-                        android:id="@+id/Snation"
+                        android:id="@+id/Spnation"
                         android:layout_weight="3" />
+
 
                 </LinearLayout>
             </LinearLayout>
