@@ -13,7 +13,7 @@
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:textSize="@dimen/text_size"
-            android:textColor="#f2ff00"
+            android:textColor="#000000"
             android:gravity="center"
             android:textStyle="bold"
             android:layout_weight="2"
@@ -25,7 +25,7 @@
             android:textSize="@dimen/text_size"
             android:layout_weight="3"
             android:gravity="center"
-            android:textColor="#ffffff"
+            android:textColor="#717171"
             />
 
     </LinearLayout>

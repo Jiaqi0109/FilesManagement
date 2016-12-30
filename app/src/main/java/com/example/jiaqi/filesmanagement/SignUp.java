@@ -14,8 +14,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.R.id.list;
-
 public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private Button btsg;
@@ -38,7 +36,7 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
         /*
          *  按钮click操作
          */
-        btsg = (Button) findViewById(R.id.return1);
+        btsg = (Button) findViewById(R.id.Flogout);
         btsg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,43 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
-    <Button
-        android:text="Button"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2" />
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="新增档案"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Button_style1"
+            android:id="@+id/Fadd" />
+
+        <Button
+            android:text="借阅管理"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Button_style1"
+            android:id="@+id/Fborrow" />
+
+        <Button
+            android:text="回收站"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Button_style1"
+            android:id="@+id/Frecycle" />
+
+        <Button
+            android:text="权限管理"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Button_style1"
+            android:id="@+id/Fpower" />
+
+        <Button
+            android:text="批量导入档案"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Button_style1"
+            android:id="@+id/Fimport" />
+
+        <Button
+            android:text="查询档案"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Button_style1"
+            android:id="@+id/Finquire" />
+
+        <Button
+            android:text="修改密码"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Button_style1"
+            android:id="@+id/Fchangepw" />
+
+    </LinearLayout>
 
     <Button
-        android:text="Button"
+        android:text="注销当前用户"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button3" />
+        android:id="@+id/Flogout"
+        android:background="@color/red"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
-    <Button
-        android:text="Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button4" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button5" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button6" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button7" />
-</LinearLayout>
+</RelativeLayout>
 

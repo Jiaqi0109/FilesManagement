@@ -89,7 +89,7 @@ public class Administrator2 extends Activity implements AdapterView.OnItemSelect
             resIds[i] = ar.getResourceId(i, 0);
         ar.recycle();
 
-        int j = (int)Math.round(Math.random()*100)%23;
+        int j = (int)Math.round(Math.random()*100)%23+1;
         imageView = (ImageView) findViewById(R.id.Spic);
         imageView.setImageResource(resIds[j]);
 
