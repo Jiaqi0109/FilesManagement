@@ -14,16 +14,9 @@ import android.view.ViewGroup;
 public class MFragmentRecycle extends Fragment {
 
 
-    public MFragmentRecycle() {
-        // Required empty public constructor
-    }
-
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.mfragment_recycle, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.mfragment_recycle,container,false);
+        return view;
     }
 
 }

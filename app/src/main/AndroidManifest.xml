@@ -19,11 +19,13 @@
         </activity>
         <activity
             android:name=".SignUp"
-            android:label="@string/sign_up"></activity>
+            android:label="@string/sign_up" />
         <activity
             android:name=".Administrator"
-            android:label="档案管理"></activity>
-        <activity android:name=".Administrator2"></activity>
+            android:label="档案管理" />
+        <activity android:name=".Administrator2" />
+        <activity android:name=".Management" />
+        <activity android:name=".Add"></activity>
     </application>
 
 </manifest>

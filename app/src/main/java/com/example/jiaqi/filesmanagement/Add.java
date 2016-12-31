@@ -1,43 +1,38 @@
 package com.example.jiaqi.filesmanagement;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.content.res.TypedArray;
-import android.media.Image;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Administrator2 extends Activity implements AdapterView.OnItemSelectedListener {
+import static android.R.id.list;
+
+public class Add extends Activity implements AdapterView.OnItemSelectedListener {
 
     private List<String> list;
-    private Spinner spinner1;
-    private Spinner spinner2,spinner3;
+    private Spinner spinner1,spinner2,spinner3,spinner4;
     private ArrayAdapter<String> arrayAdapter;
     private ImageView imageView;
     private EditText editText1,editText2,editText3,editText4,editText5,editText6,editText7,editText8,editText9;
     private Button bt1;
     private Button bt2;
 
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_administrator2);
+        setContentView(R.layout.activity_add);
 
         Bundle bundle = this.getIntent().getExtras();
-
-
 
 
         /*
@@ -64,6 +59,21 @@ public class Administrator2 extends Activity implements AdapterView.OnItemSelect
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(arrayAdapter);
         spinner1.setOnItemSelectedListener(this);
+
+        spinner4 = (Spinner)findViewById(R.id.Sgrade);
+        list = new ArrayList<String>();
+        list.add("大一");
+        list.add("大二");
+        list.add("大三");
+        list.add("大四");
+        arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,list);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner1.setAdapter(arrayAdapter);
+        spinner1.setOnItemSelectedListener(this);
+
+        /*
+         * Spinner3选择民族
+         */
         spinner3 = (Spinner)findViewById(R.id.Spnation);
         list = new ArrayList<String>();
         list.add("汉族");list.add("阿昌族");list.add("白族");list.add("保安族");list.add("布朗族");list.add("布依族");list.add("朝鲜族");list.add("达斡尔族");list.add("傣族");list.add("德昂族");list.add("东乡族");list.add("侗族");list.add("独龙族");list.add("俄罗斯族");
@@ -74,9 +84,6 @@ public class Administrator2 extends Activity implements AdapterView.OnItemSelect
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner3.setAdapter(arrayAdapter);
         spinner3.setOnItemSelectedListener(this);
-        /*
-         * Spinner3选择民族
-         */
 
         /*
          * 设置图片
@@ -101,99 +108,13 @@ public class Administrator2 extends Activity implements AdapterView.OnItemSelect
         editText7=(EditText)findViewById(R.id.Sacadmy);//学院
         editText8=(EditText)findViewById(R.id.Shome);//住址
         editText9=(EditText)findViewById(R.id.Sdata);//注册日期
-        /*
-        传值函数
-         */
-        editText1.setFocusable(false);
-        editText1.setFocusableInTouchMode(false);
-        editText2.setFocusable(false);
-        editText2.setFocusableInTouchMode(false);
-        editText3.setFocusable(false);
-        editText3.setFocusableInTouchMode(false);
-        editText4.setFocusable(false);
-        editText4.setFocusableInTouchMode(false);
-        editText5.setFocusable(false);
-        editText5.setFocusableInTouchMode(false);
-        editText6.setFocusable(false);
-        editText6.setFocusableInTouchMode(false);
-        editText7.setFocusable(false);
-        editText7.setFocusableInTouchMode(false);
-        editText8.setFocusable(false);
-        editText8.setFocusableInTouchMode(false);
-        editText9.setFocusable(false);
-        editText9.setFocusableInTouchMode(false);
 
-        spinner1.setClickable(false);
-        spinner2.setClickable(false);
-        spinner3.setClickable(false);
+    }
 
-
-        bt1 = (Button)findViewById(R.id.Sedit);//编辑
-        bt1.setOnClickListener(new View.OnClickListener(){
-
-            public void onClick(View v) {
-                editText2.setFocusable(true);
-                editText2.setFocusableInTouchMode(true);
-
-                editText3.setFocusable(true);
-                editText3.setFocusableInTouchMode(true);
-
-                editText4.setFocusable(true);
-                editText4.setFocusableInTouchMode(true);
-
-                editText5.setFocusable(true);
-                editText5.setFocusableInTouchMode(true);
-
-                editText6.setFocusable(true);
-                editText6.setFocusableInTouchMode(true);
-
-                editText7.setFocusable(true);
-                editText7.setFocusableInTouchMode(true);
-
-                editText8.setFocusable(true);
-                editText8.setFocusableInTouchMode(true);
-
-                editText2.requestFocus();
-
-                spinner1.setClickable(true);
-                spinner2.setClickable(true);
-                spinner3.setClickable(true);
-            }
-        });
-
-
-         bt2 = (Button)findViewById(R.id.Sok);//确定
-         bt2.setOnClickListener(new View.OnClickListener(){
-
-            public void onClick(View v) {
-            editText2.setFocusable(false);
-            editText2.setFocusableInTouchMode(false);
-
-            editText3.setFocusable(false);
-            editText3.setFocusableInTouchMode(false);
-            editText4.setFocusable(false);
-            editText4.setFocusableInTouchMode(false);
-            editText5.setFocusable(false);
-            editText5.setFocusableInTouchMode(false);
-            editText6.setFocusable(false);
-            editText6.setFocusableInTouchMode(false);
-            editText7.setFocusable(false);
-            editText7.setFocusableInTouchMode(false);
-            editText8.setFocusable(false);
-            editText8.setFocusableInTouchMode(false);
-
-            spinner1.setClickable(false);
-            spinner2.setClickable(false);
-                spinner3.setClickable(false);
-        }
-    });
-
-}
-    @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
     }
-    @Override
+
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
