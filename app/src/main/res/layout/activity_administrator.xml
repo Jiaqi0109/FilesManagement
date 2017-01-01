@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_0"
     android:paddingRight="@dimen/activity_0"
     android:paddingTop="@dimen/activity_0"
-    tools:context="com.example.jiaqi.filesmanagement.Administrator">
+    tools:context="com.example.jiaqi.filesmanagement.Manager.Administrator">
 
     <RadioGroup
         android:id="@+id/rd_group"

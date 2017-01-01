@@ -1,14 +1,13 @@
-package com.example.jiaqi.filesmanagement;
+package com.example.jiaqi.filesmanagement.Manager;
 
 import android.app.Activity;
 import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import com.example.jiaqi.filesmanagement.R;
 
 
 public class Administrator extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener{

@@ -1,4 +1,4 @@
-package com.example.jiaqi.filesmanagement;
+package com.example.jiaqi.filesmanagement.Manager;
 
 
 import android.content.DialogInterface;
@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.jiaqi.filesmanagement.R;
 
 
 /**

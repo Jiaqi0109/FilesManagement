@@ -21,16 +21,16 @@
             android:name=".SignUp"
             android:label="@string/sign_up" />
         <activity
-            android:name=".Administrator"
+            android:name=".Manager.Administrator"
             android:label="档案管理" />
-        <activity android:name=".Administrator2" />
+        <activity android:name=".Manager.Administrator2" />
         <activity
-            android:name=".Management"
-            android:label="管理"/>
-        <activity android:name=".Add">
-        </activity>
-        <activity android:name=".Inquier_son">
-        </activity>
+            android:name=".Manager.Management"
+            android:label="管理" />
+        <activity android:name=".Manager.Add" />
+        <activity android:name=".Manager.Inquier_son" />
+        <activity android:name=".NormalUser.NormalUser1" />
+        <activity android:name=".NormalUser.NormalUser2"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.jiaqi.filesmanagement;
+package com.example.jiaqi.filesmanagement.Manager;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -7,7 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
+
+import com.example.jiaqi.filesmanagement.MainLogin;
+import com.example.jiaqi.filesmanagement.Manager.Add;
+import com.example.jiaqi.filesmanagement.Manager.Management;
+import com.example.jiaqi.filesmanagement.R;
 
 /**
  * Created by jiaqi on 16-12-23.

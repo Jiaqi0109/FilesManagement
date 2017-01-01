@@ -1,4 +1,4 @@
-package com.example.jiaqi.filesmanagement;
+package com.example.jiaqi.filesmanagement.Manager;
 
 import android.app.Activity;
 import android.content.res.TypedArray;
@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
+
+import com.example.jiaqi.filesmanagement.R;
 
 import java.util.ArrayList;
 import java.util.List;

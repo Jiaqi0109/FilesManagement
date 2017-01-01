@@ -1,8 +1,10 @@
-package com.example.jiaqi.filesmanagement;
+package com.example.jiaqi.filesmanagement.Manager;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+
+import com.example.jiaqi.filesmanagement.R;
 
 public class Management extends AppCompatActivity {
     private int i;

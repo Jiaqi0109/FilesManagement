@@ -1,4 +1,4 @@
-package com.example.jiaqi.filesmanagement;
+package com.example.jiaqi.filesmanagement.Manager;
 
 
 import android.content.DialogInterface;
@@ -15,41 +15,38 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
+import com.example.jiaqi.filesmanagement.R;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class MFragmentRecycle extends ListFragment {
-    private ArrayAdapter<String> rec_adapter;
+public class MFragmentPower extends ListFragment {
+
+    private ArrayAdapter<String> po_adapter;
 
     public void onCreate(Bundle savedInstanceState) {
 
-        final String[] from = new String[] {"姓名", "学号","用户名","被删日期"};
-        final int[] to = new int[] {R.id.recycle_text1, R.id.recycle_text2, R.id.recycle_text3, R.id.recycle_text4};
+        final String[] from = new String[] {"姓名", "类型"};
+        final int[] to = new int[] {R.id.text1, R.id.text2};
         super.onCreate(savedInstanceState);
-        SimpleAdapter rec_adapter = new SimpleAdapter(
+        SimpleAdapter po_adapter = new SimpleAdapter(
                 this.getActivity(), getSimpleData(),
-                R.layout.list_item_recycle, from, to);
-        this.setListAdapter(rec_adapter);
+                R.layout.list_item, from, to);
+        this.setListAdapter(po_adapter);
     }
+
     public void onListItemClick(ListView parent, View v,int position, long id) {
-        Toast.makeText(getActivity(),
-                "You have selected " + position,
-                Toast.LENGTH_SHORT).show();
+
         dialog1();
-
-
 
     }
     private void dialog1(){
         AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());  //先得到构造器
         builder.setTitle("提示"); //设置标题
-        builder.setMessage("请选择操作:"); //设置内容
+        builder.setMessage("是否改变用户类型?"); //设置内容
         builder.setIcon(R.mipmap.ic_launcher);//设置图标，图片id即可
         builder.setPositiveButton("确定", new DialogInterface.OnClickListener() { //设置确定按钮
             @Override
@@ -58,11 +55,11 @@ public class MFragmentRecycle extends ListFragment {
                 Toast.makeText(getActivity(), "确认" + which, Toast.LENGTH_SHORT).show();
             }
         });
-        builder.setNegativeButton("还原", new DialogInterface.OnClickListener() { //设置取消按钮
+        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() { //设置取消按钮
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                Toast.makeText(getActivity(), "还原" + which, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "取消" + which, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -75,32 +72,24 @@ public class MFragmentRecycle extends ListFragment {
 
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("姓名", "张三");
-        map.put("学号", "001");
-        map.put("用户名", "方楠");
-        map.put("被删日期", "2017.1.1");
+        map.put("类型", "管理员");
         list1.add(map);
 
         map = new HashMap<String, Object>();
         map.put("姓名", "李四");
-        map.put("学号", "002");
-        map.put("用户名", "方楠");
-        map.put("被删日期", "2017.1.1");
+        map.put("类型", "学生");
         list1.add(map);
 
         map = new HashMap<String, Object>();
         map.put("姓名", "王五");
-        map.put("学号", "003");
-        map.put("用户名", "方楠");
-        map.put("被删日期", "2017.1.1");
+        map.put("类型", "学生");
         list1.add(map);
 
         return list1;
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.mfragment_recycle,container,false);
-        return view;
+        return inflater.inflate(R.layout.mfragment_power, container, false);
     }
-
 
 }

@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.jiaqi.filesmanagement.Manager.Administrator;
+
 public class MainLogin extends Activity {
 
     private Button btup;
