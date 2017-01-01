@@ -23,13 +23,11 @@ import java.util.List;
 public class Administrator2 extends Activity implements AdapterView.OnItemSelectedListener {
 
     private List<String> list;
-    private Spinner spinner1;
-    private Spinner spinner2,spinner3;
+    private Spinner spinner1, spinner2, spinner3;
     private ArrayAdapter<String> arrayAdapter;
     private ImageView imageView;
     private EditText editText1,editText2,editText3,editText4,editText5,editText6,editText7,editText8,editText9;
-    private Button bt1;
-    private Button bt2;
+    private Button bt1, bt2, bt3;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -185,6 +183,16 @@ public class Administrator2 extends Activity implements AdapterView.OnItemSelect
                 spinner3.setClickable(false);
         }
     });
+
+        bt3 = (Button)findViewById(R.id.Sdelete);//删除
+        bt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Administrator2.this, Administrator.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 }
     @Override
