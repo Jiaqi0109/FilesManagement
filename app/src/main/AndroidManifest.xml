@@ -32,7 +32,9 @@
         <activity android:name=".NormalUser.NormalUser1" />
         <activity android:name=".NormalUser.NormalUser2" />
         <activity android:name=".NormalUser.NormalBorrow" />
-        <activity android:name=".NormalUser.NormalChangepw"></activity>
+        <activity android:name=".NormalUser.NormalChangepw" />
+        <activity android:name=".Others.OtherUser" />
+        <activity android:name=".ChangePassword"></activity>
     </application>
 
 </manifest>

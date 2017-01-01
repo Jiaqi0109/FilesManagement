@@ -10,11 +10,11 @@ import android.widget.Toast;
 
 import com.example.jiaqi.filesmanagement.Manager.Administrator;
 import com.example.jiaqi.filesmanagement.NormalUser.NormalUser1;
+import com.example.jiaqi.filesmanagement.Others.OtherUser;
 
 public class MainLogin extends Activity {
 
-    private Button btup;
-    private Button btin;
+    private Button btup, btin, bt1, bt2;
     private TextView textuser;
     private TextView textpw;
 
@@ -32,7 +32,7 @@ public class MainLogin extends Activity {
         btin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainLogin.this, NormalUser1.class);
+                Intent intent = new Intent(MainLogin.this, Administrator.class);
                 startActivity(intent);
 
                 finish();
@@ -48,6 +48,30 @@ public class MainLogin extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainLogin.this, SignUp.class);
                 startActivityForResult(intent, 1);
+            }
+        });
+
+        /*
+         * 临时按钮
+         */
+        
+
+        bt1 = (Button) findViewById(R.id.normal);
+        bt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainLogin.this, NormalUser1.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        bt2 = (Button) findViewById(R.id.others);
+        bt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainLogin.this, OtherUser.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
