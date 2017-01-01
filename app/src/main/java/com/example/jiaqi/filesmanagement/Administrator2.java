@@ -188,6 +188,7 @@ public class Administrator2 extends Activity implements AdapterView.OnItemSelect
         bt3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Administrator.activity_Ad.finish();
                 Intent intent = new Intent(Administrator2.this, Administrator.class);
                 startActivity(intent);
                 finish();

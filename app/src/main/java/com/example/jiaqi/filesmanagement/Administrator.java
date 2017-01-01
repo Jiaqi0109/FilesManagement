@@ -13,6 +13,7 @@ import android.widget.RadioGroup;
 
 public class Administrator extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener{
 
+    static Activity activity_Ad;
     private RadioGroup rpTab;
     private RadioButton rbDeal,rbPoi,rbMore,rbUser;
     private Ad_MyFragment1 fg1;
@@ -24,6 +25,7 @@ public class Administrator extends AppCompatActivity implements RadioGroup.OnChe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_administrator);
 
+        activity_Ad = this;
         bindView();
 
     }
