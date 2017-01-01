@@ -49,7 +49,7 @@ public class MFragmentRecycle extends ListFragment {
     private void dialog1(){
         AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());  //先得到构造器
         builder.setTitle("提示"); //设置标题
-        builder.setMessage("是否彻底删除?"); //设置内容
+        builder.setMessage("请选择操作:"); //设置内容
         builder.setIcon(R.mipmap.ic_launcher);//设置图标，图片id即可
         builder.setPositiveButton("确定", new DialogInterface.OnClickListener() { //设置确定按钮
             @Override
@@ -58,7 +58,7 @@ public class MFragmentRecycle extends ListFragment {
                 Toast.makeText(getActivity(), "确认" + which, Toast.LENGTH_SHORT).show();
             }
         });
-        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() { //设置取消按钮
+        builder.setNegativeButton("还原", new DialogInterface.OnClickListener() { //设置取消按钮
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();

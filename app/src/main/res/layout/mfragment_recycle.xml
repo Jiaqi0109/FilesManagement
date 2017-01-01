@@ -4,10 +4,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.jiaqi.filesmanagement.MFragmentRecycle">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <ListView
-        android:id="@+id/list_recycle"
+        android:id="@+id/android:list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
 </FrameLayout>
