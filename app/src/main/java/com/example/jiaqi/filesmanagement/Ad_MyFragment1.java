@@ -48,8 +48,6 @@ public class Ad_MyFragment1 extends ListFragment {
         bundle.putInt("name", position);
         intent.putExtras(bundle);
         startActivity(intent);
-
-        getActivity().finish();
     }
 
     private List<Map<String, Object>> getSimpleData() {
