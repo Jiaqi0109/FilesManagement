@@ -30,7 +30,9 @@
         <activity android:name=".Manager.Add" />
         <activity android:name=".Manager.Inquier_son" />
         <activity android:name=".NormalUser.NormalUser1" />
-        <activity android:name=".NormalUser.NormalUser2"></activity>
+        <activity android:name=".NormalUser.NormalUser2" />
+        <activity android:name=".NormalUser.NormalBorrow" />
+        <activity android:name=".NormalUser.NormalBorrowView"></activity>
     </application>
 
 </manifest>

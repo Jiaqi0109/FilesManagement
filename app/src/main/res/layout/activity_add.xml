@@ -206,6 +206,7 @@
                     android:layout_height="match_parent"
                     android:inputType="textPersonName"
                     android:ems="10"
+                    android:hint="YY-MM-DDDD"
                     android:gravity="center"
                     android:id="@+id/Sborn"
                     android:layout_weight="2" />

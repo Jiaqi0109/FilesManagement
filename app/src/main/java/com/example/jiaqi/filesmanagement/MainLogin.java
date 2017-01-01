@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.jiaqi.filesmanagement.Manager.Administrator;
+import com.example.jiaqi.filesmanagement.NormalUser.NormalUser1;
 
 public class MainLogin extends Activity {
 
@@ -31,8 +32,10 @@ public class MainLogin extends Activity {
         btin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainLogin.this, Administrator.class);
+                Intent intent = new Intent(MainLogin.this, NormalUser1.class);
                 startActivity(intent);
+
+                finish();
             }
         });
 
