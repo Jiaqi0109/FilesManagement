@@ -28,10 +28,8 @@
             android:name=".Management"
             android:label="管理"/>
         <activity android:name=".Add">
-
         </activity>
         <activity android:name=".Inquier_son">
-
         </activity>
     </application>
 
