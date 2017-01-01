@@ -4,6 +4,5 @@
     android:layout_height="match_parent"
     tools:context="com.example.jiaqi.filesmanagement.Manager.MFragmentInquier">
 
-    <!-- TODO: Update blank fragment layout -->
 
 </FrameLayout>

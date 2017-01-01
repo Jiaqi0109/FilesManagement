@@ -5,11 +5,12 @@ import android.os.Bundle;
 
 import com.example.jiaqi.filesmanagement.R;
 
-public class NormalBorrowView extends AppCompatActivity {
+public class NormalChangepw extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add);
+        setContentView(R.layout.mfragment_changepw);
+
     }
 }

@@ -11,28 +11,28 @@
         <LinearLayout
 
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:orientation="horizontal"
             android:layout_weight="1"
             >
             <LinearLayout
 
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:layout_weight="1"
                 >
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="&#160;&#160;申请人&#160;&#160;:"
                     android:gravity="center"
-                    android:layout_weight="2" />
+                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/recycle_text1"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:textSize="@dimen/text_size"
                     android:textColor="#000000"
                     android:gravity="center"
@@ -45,8 +45,8 @@
 
             <LinearLayout
 
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:layout_weight="1"
                 >
@@ -55,13 +55,13 @@
                     android:layout_height="match_parent"
                     android:text="&#160;&#160;学&#160;&#160;&#160;&#160;号&#160;&#160;:"
                     android:gravity="center"
-                    android:layout_weight="2" />
+                    android:layout_weight="1" />
 
 
                 <TextView
                     android:id="@+id/recycle_text2"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:textSize="@dimen/text_size"
                     android:layout_weight="2"
                     android:gravity="center"
@@ -74,31 +74,31 @@
         <LinearLayout
 
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:orientation="vertical"
-            android:layout_weight="3"
+            android:layout_weight="2"
             >
             <LinearLayout
 
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:orientation="horizontal"
-                android:layout_weight="3"
+                android:layout_weight="1"
                 >
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="&#160;&#160;申请日期&#160;&#160;:"
                     android:gravity="center"
-                    android:layout_weight="2" />
+                    android:layout_weight="1" />
 
 
                 <TextView
                     android:id="@+id/recycle_text3"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:textSize="@dimen/text_size"
-                    android:layout_weight="2"
+                    android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="#000000"
                     />
@@ -107,24 +107,24 @@
             <LinearLayout
 
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:orientation="horizontal"
-                android:layout_weight="3"
+                android:layout_weight="1"
                 >
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="&#160;&#160;借阅原因&#160;&#160;:"
                     android:gravity="center"
-                    android:layout_weight="2" />
+                    android:layout_weight="1" />
 
 
                 <TextView
                     android:id="@+id/recycle_text4"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:textSize="@dimen/text_size"
-                    android:layout_weight="2"
+                    android:layout_weight="3"
                     android:gravity="center"
 
                     android:textColor="#000000"

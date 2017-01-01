@@ -1,5 +1,6 @@
 package com.example.jiaqi.filesmanagement.NormalUser;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,12 +11,15 @@ import com.example.jiaqi.filesmanagement.MainLogin;
 import com.example.jiaqi.filesmanagement.R;
 
 public class NormalUser1 extends AppCompatActivity {
+    static Activity activity_NU1;
     private Button Bt_exit, Bt_setting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_normal_user1);
+
+        activity_NU1 = this;
 
         Bt_setting = (Button)findViewById(R.id.Ssetting);
         Bt_setting.setOnClickListener(new View.OnClickListener() {
