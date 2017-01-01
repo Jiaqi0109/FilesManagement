@@ -14,7 +14,6 @@ import android.widget.Spinner;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.R.id.list;
 
 public class Add extends Activity implements AdapterView.OnItemSelectedListener {
 
@@ -31,9 +30,6 @@ public class Add extends Activity implements AdapterView.OnItemSelectedListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
-
-        Bundle bundle = this.getIntent().getExtras();
-
 
         /*
          * Spinner2选择政治面貌
@@ -60,7 +56,7 @@ public class Add extends Activity implements AdapterView.OnItemSelectedListener 
         spinner1.setAdapter(arrayAdapter);
         spinner1.setOnItemSelectedListener(this);
 
-        spinner4 = (Spinner)findViewById(R.id.Sgrade);
+        spinner4 = (Spinner)findViewById(R.id.Ssgrade);
         list = new ArrayList<String>();
         list.add("大一");
         list.add("大二");
@@ -68,8 +64,8 @@ public class Add extends Activity implements AdapterView.OnItemSelectedListener 
         list.add("大四");
         arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,list);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner1.setAdapter(arrayAdapter);
-        spinner1.setOnItemSelectedListener(this);
+        spinner4.setAdapter(arrayAdapter);
+        spinner4.setOnItemSelectedListener(this);
 
         /*
          * Spinner3选择民族
@@ -111,10 +107,12 @@ public class Add extends Activity implements AdapterView.OnItemSelectedListener 
 
     }
 
+    @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
     }
 
+    @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
     }

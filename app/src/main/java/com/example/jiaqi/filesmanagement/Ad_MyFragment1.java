@@ -42,10 +42,6 @@ public class Ad_MyFragment1 extends ListFragment {
         this.setListAdapter(adapter);
     }
     public void onListItemClick(ListView parent, View v,int position, long id) {
-        Toast.makeText(getActivity(),
-                "You have selected " + position,
-                Toast.LENGTH_SHORT).show();
-
 
         Intent intent = new Intent(getActivity(), Administrator2.class);
         Bundle bundle=new Bundle();

@@ -38,8 +38,6 @@ public class Administrator2 extends Activity implements AdapterView.OnItemSelect
         Bundle bundle = this.getIntent().getExtras();
 
 
-
-
         /*
          * Spinner2选择政治面貌
          */

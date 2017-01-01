@@ -24,25 +24,11 @@
             android:id="@+id/Fborrow" />
 
         <Button
-            android:text="回收站"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Button_style1"
-            android:id="@+id/Frecycle" />
-
-        <Button
             android:text="权限管理"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Button_style1"
             android:id="@+id/Fpower" />
-
-        <Button
-            android:text="批量导入档案"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Button_style1"
-            android:id="@+id/Fimport" />
 
         <Button
             android:text="查询档案"
@@ -52,11 +38,25 @@
             android:id="@+id/Finquire" />
 
         <Button
+            android:text="批量导入档案"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Button_style1"
+            android:id="@+id/Fimport" />
+
+        <Button
             android:text="修改密码"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Button_style1"
             android:id="@+id/Fchangepw" />
+
+        <Button
+            android:text="回收站"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Button_style1"
+            android:id="@+id/Frecycle" />
 
     </LinearLayout>
 

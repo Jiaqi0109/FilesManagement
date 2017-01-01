@@ -33,55 +33,89 @@ public class Ad_MyFragment2 extends Fragment{
         bt_power = (Button)view.findViewById(R.id.Fpower);
         bt_import = (Button)view.findViewById(R.id.Fimport);
         bt_inquire = (Button)view.findViewById(R.id.Finquire);
-        bt_changepw = (Button)view.findViewById(R.id.Fpower);
+        bt_changepw = (Button)view.findViewById(R.id.Fchangepw);
         bt_logout = (Button)view.findViewById(R.id.Flogout);
 
         bt_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getActivity(), Add.class);
+                startActivity(intent);
             }
         });
+
+
+        return view;
+    }
+
+
+    public void onActivityCreated(Bundle savedInstanceState) {
+
+        super.onActivityCreated(savedInstanceState);
 
         bt_borrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getActivity(), Management.class);
+                Bundle bundle=new Bundle();
+                bundle.putInt("i", 1);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
 
         bt_recycle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getActivity(), Management.class);
+                Bundle bundle=new Bundle();
+                bundle.putInt("i", 2);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
 
         bt_power.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getActivity(), Management.class);
+                Bundle bundle=new Bundle();
+                bundle.putInt("i", 3);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
 
         bt_import.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getActivity(), Management.class);
+                Bundle bundle=new Bundle();
+                bundle.putInt("i", 4);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
 
         bt_inquire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getActivity(), Management.class);
+                Bundle bundle=new Bundle();
+                bundle.putInt("i", 5);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
 
         bt_changepw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getActivity(), Management.class);
+                Bundle bundle=new Bundle();
+                bundle.putInt("i", 6);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
 
@@ -93,9 +127,5 @@ public class Ad_MyFragment2 extends Fragment{
                 getActivity().finish();
             }
         });
-
-
-        return view;
-
     }
 }
