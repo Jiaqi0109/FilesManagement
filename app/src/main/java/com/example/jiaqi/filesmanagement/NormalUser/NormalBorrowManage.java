@@ -1,4 +1,4 @@
-package com.example.jiaqi.filesmanagement.Others;
+package com.example.jiaqi.filesmanagement.NormalUser;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -20,10 +20,9 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class OthersBorrowManage extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class NormalBorrowManage extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    static Activity activity_OB;
-
+    static Activity activity_NB;
     private ListView Lv;
     private String str, str2 = "你是个傻逼";
 
@@ -32,7 +31,8 @@ public class OthersBorrowManage extends AppCompatActivity implements AdapterView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_view_normal_borrow);
 
-        activity_OB = this;
+        activity_NB = this;
+
 
         Lv = (ListView) findViewById(R.id.list1);
         final String[] from = new String[]{"学号", "借阅日期", "借阅原因", "处理时间", "是否同意借阅"};
@@ -95,7 +95,7 @@ public class OthersBorrowManage extends AppCompatActivity implements AdapterView
                     .show();
         }
         else{
-            Intent intent = new Intent(this, OthersBorrow.class);
+            Intent intent = new Intent(this, Borrow.class);
             Bundle bundle=new Bundle();
             bundle.putInt("学号", i);
             intent.putExtras(bundle);

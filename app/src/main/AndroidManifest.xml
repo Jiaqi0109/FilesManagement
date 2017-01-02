@@ -29,14 +29,32 @@
             android:label="管理" />
         <activity android:name=".Manager.Add" />
         <activity android:name=".Manager.Inquier_son" />
-        <activity android:name=".NormalUser.NormalUser1" />
-        <activity android:name=".NormalUser.NormalUser2" />
+        <activity
+            android:name=".NormalUser.NormalUser1"
+            />
+        <activity
+            android:name=".NormalUser.NormalUser2"
+            android:label="个人管理"
+            />
         <activity android:name=".NormalUser.Borrow" />
-        <activity android:name=".NormalUser.NormalBorrowManage" />
-        <activity android:name=".Others.OtherUser" />
-        <activity android:name=".ChangePassword" />
-        <activity android:name=".Others.OthersBorrow" />
-        <activity android:name=".Others.OthersBorrowManage"></activity>
+        <activity
+            android:name=".NormalUser.NormalBorrowManage"
+            android:label="个人管理"
+            />
+        <activity
+            android:name=".Others.OtherUser"
+            android:label="个人管理"
+            />
+        <activity android:name=".ChangePassword"
+            android:label="修改密码"/>
+        <activity
+            android:name=".Others.OthersBorrow"
+            />
+        <activity
+            android:name=".Others.OthersBorrowManage"
+            android:label="个人管理"
+            >
+        </activity>
     </application>
 
 </manifest>

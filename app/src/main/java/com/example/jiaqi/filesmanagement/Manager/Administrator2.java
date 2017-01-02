@@ -20,18 +20,29 @@ import java.util.List;
 public class Administrator2 extends Activity implements AdapterView.OnItemSelectedListener {
 
     private List<String> list;
-    private Spinner spinner1, spinner2, spinner3;
+    private Spinner spinner1, spinner2, spinner3, spinner4;
     private ArrayAdapter<String> arrayAdapter;
     private ImageView imageView;
-    private EditText editText1,editText2,editText3,editText4,editText5,editText6,editText7,editText8,editText9;
+    private EditText editText1,editText2,editText3,editText5,editText6,editText7,editText8,editText9;
     private Button bt1, bt2, bt3;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_administrator2);
+        setContentView(R.layout.fileview_can_change);
 
         Bundle bundle = this.getIntent().getExtras();
 
+
+        spinner4 = (Spinner)findViewById(R.id.Ssgrade);
+        list = new ArrayList<String>();
+        list.add("大一");
+        list.add("大二");
+        list.add("大三");
+        list.add("大四");
+        arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,list);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner4.setAdapter(arrayAdapter);
+        spinner4.setOnItemSelectedListener(this);
 
         /*
          * Spinner2选择政治面貌
@@ -57,6 +68,10 @@ public class Administrator2 extends Activity implements AdapterView.OnItemSelect
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(arrayAdapter);
         spinner1.setOnItemSelectedListener(this);
+
+        /*
+         * Spinner3选择民族
+         */
         spinner3 = (Spinner)findViewById(R.id.Spnation);
         list = new ArrayList<String>();
         list.add("汉族");list.add("阿昌族");list.add("白族");list.add("保安族");list.add("布朗族");list.add("布依族");list.add("朝鲜族");list.add("达斡尔族");list.add("傣族");list.add("德昂族");list.add("东乡族");list.add("侗族");list.add("独龙族");list.add("俄罗斯族");
@@ -67,9 +82,7 @@ public class Administrator2 extends Activity implements AdapterView.OnItemSelect
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner3.setAdapter(arrayAdapter);
         spinner3.setOnItemSelectedListener(this);
-        /*
-         * Spinner3选择民族
-         */
+
 
         /*
          * 设置图片
@@ -88,7 +101,6 @@ public class Administrator2 extends Activity implements AdapterView.OnItemSelect
         editText1=(EditText)findViewById(R.id.Snumber);//学号
         editText2=(EditText)findViewById(R.id.Sname);//姓名
         editText3=(EditText)findViewById(R.id.Sage);//年龄
-        editText4=(EditText)findViewById(R.id.Sgrade);//年级
         editText5=(EditText)findViewById(R.id.Sborn);//出生年月
         editText6=(EditText)findViewById(R.id.Sid);//身份证号
         editText7=(EditText)findViewById(R.id.Sacadmy);//学院
@@ -103,8 +115,6 @@ public class Administrator2 extends Activity implements AdapterView.OnItemSelect
         editText2.setFocusableInTouchMode(false);
         editText3.setFocusable(false);
         editText3.setFocusableInTouchMode(false);
-        editText4.setFocusable(false);
-        editText4.setFocusableInTouchMode(false);
         editText5.setFocusable(false);
         editText5.setFocusableInTouchMode(false);
         editText6.setFocusable(false);
@@ -119,9 +129,12 @@ public class Administrator2 extends Activity implements AdapterView.OnItemSelect
         spinner1.setClickable(false);
         spinner2.setClickable(false);
         spinner3.setClickable(false);
+        spinner4.setClickable(false);
 
 
-        bt1 = (Button)findViewById(R.id.Sedit);//编辑
+
+        bt1 = (Button)findViewById(R.id.button_1);//编辑
+        bt1.setText("编辑");
         bt1.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View v) {
@@ -130,9 +143,6 @@ public class Administrator2 extends Activity implements AdapterView.OnItemSelect
 
                 editText3.setFocusable(true);
                 editText3.setFocusableInTouchMode(true);
-
-                editText4.setFocusable(true);
-                editText4.setFocusableInTouchMode(true);
 
                 editText5.setFocusable(true);
                 editText5.setFocusableInTouchMode(true);
@@ -151,11 +161,14 @@ public class Administrator2 extends Activity implements AdapterView.OnItemSelect
                 spinner1.setClickable(true);
                 spinner2.setClickable(true);
                 spinner3.setClickable(true);
+                spinner4.setClickable(true);
+
             }
         });
 
 
-         bt2 = (Button)findViewById(R.id.Sok);//确定
+         bt2 = (Button)findViewById(R.id.button_2);//确定
+         bt2.setText("确定");
          bt2.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View v) {
@@ -164,8 +177,6 @@ public class Administrator2 extends Activity implements AdapterView.OnItemSelect
 
             editText3.setFocusable(false);
             editText3.setFocusableInTouchMode(false);
-            editText4.setFocusable(false);
-            editText4.setFocusableInTouchMode(false);
             editText5.setFocusable(false);
             editText5.setFocusableInTouchMode(false);
             editText6.setFocusable(false);
@@ -177,11 +188,14 @@ public class Administrator2 extends Activity implements AdapterView.OnItemSelect
 
             spinner1.setClickable(false);
             spinner2.setClickable(false);
-                spinner3.setClickable(false);
-        }
+            spinner3.setClickable(false);
+            spinner4.setClickable(false);
+
+            }
     });
 
-        bt3 = (Button)findViewById(R.id.Sdelete);//删除
+        bt3 = (Button)findViewById(R.id.button_3);//删除
+        bt3.setText("删除");
         bt3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

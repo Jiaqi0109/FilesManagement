@@ -29,7 +29,7 @@ public class NormalUser2 extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_normal_user2);
+        setContentView(R.layout.activity_other_user);
 
         bt1 = (Button) findViewById(R.id.NborrowSearch);
         bt2 = (Button) findViewById(R.id.NborrowList);

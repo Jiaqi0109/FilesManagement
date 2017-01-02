@@ -23,15 +23,29 @@ public class Add extends Activity implements AdapterView.OnItemSelectedListener 
     private Spinner spinner1,spinner2,spinner3,spinner4;
     private ArrayAdapter<String> arrayAdapter;
     private ImageView imageView;
-    private EditText editText1,editText2,editText3,editText4,editText5,editText6,editText7,editText8,editText9;
-    private Button bt1;
-    private Button bt2;
+    private EditText editText1,editText2,editText3,editText5,editText6,editText7,editText8,editText9;
+    private Button bt1, bt2, bt3;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add);
+        setContentView(R.layout.fileview_can_change);
+
+        bt1 = (Button)findViewById(R.id.button_1);
+        bt1.setVisibility(View.INVISIBLE);
+
+        bt2 = (Button)findViewById(R.id.button_2);
+        bt2.setText("确定");
+        bt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        bt3 = (Button)findViewById(R.id.button_3);
+        bt3.setVisibility(View.INVISIBLE);
 
         /*
          * Spinner2选择政治面貌
@@ -100,7 +114,6 @@ public class Add extends Activity implements AdapterView.OnItemSelectedListener 
         editText1=(EditText)findViewById(R.id.Snumber);//学号
         editText2=(EditText)findViewById(R.id.Sname);//姓名
         editText3=(EditText)findViewById(R.id.Sage);//年龄
-        editText4=(EditText)findViewById(R.id.Sgrade);//年级
         editText5=(EditText)findViewById(R.id.Sborn);//出生年月
         editText6=(EditText)findViewById(R.id.Sid);//身份证号
         editText7=(EditText)findViewById(R.id.Sacadmy);//学院

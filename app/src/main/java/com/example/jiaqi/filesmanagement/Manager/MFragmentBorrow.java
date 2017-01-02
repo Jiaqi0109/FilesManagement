@@ -51,6 +51,7 @@ public class MFragmentBorrow extends ListFragment {
         builder.setTitle("提示"); //设置标题
         builder.setMessage("请选择操作:"); //设置内容
         builder.setIcon(R.mipmap.ic_launcher);//设置图标，图片id即可
+
         builder.setPositiveButton("同意借阅", new DialogInterface.OnClickListener() { //设置确定按钮
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -58,6 +59,7 @@ public class MFragmentBorrow extends ListFragment {
                 Toast.makeText(getActivity(), "确认同意" + which, Toast.LENGTH_SHORT).show();
             }
         });
+
         builder.setNegativeButton("拒绝借阅", new DialogInterface.OnClickListener() { //设置取消按钮
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -112,7 +114,7 @@ public class MFragmentBorrow extends ListFragment {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.mfragment_borrow,container,false);
+        View view = inflater.inflate(R.layout.list_view,container,false);
         return view;
     }
 

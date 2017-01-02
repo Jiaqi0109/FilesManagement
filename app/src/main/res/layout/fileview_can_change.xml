@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main2"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    tools:context="com.example.jiaqi.filesmanagement.Manager.Administrator2">
-
+    android:paddingTop="@dimen/activity_vertical_margin">
 
     <LinearLayout
         android:orientation="vertical"
@@ -75,6 +68,7 @@
                         android:layout_height="match_parent"
                         android:ems="10"
                         android:inputType="number"
+                        android:maxLength="10"
                         android:gravity="center"
                         android:id="@+id/Snumber"
                         android:layout_weight="3" />
@@ -101,14 +95,6 @@
                         android:layout_weight="3">
                     </Spinner>
 
-                    <!--<EditText-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:inputType="textPersonName"-->
-                        <!--android:ems="10"-->
-                        <!--android:gravity="center"-->
-                        <!--android:id="@+id/Ssex"-->
-                        <!--android:layout_weight="3" />-->
 
                 </LinearLayout>
                 <LinearLayout
@@ -148,14 +134,19 @@
                         android:text="&#160;&#160;年&#160;&#160;&#160;&#160;级&#160;&#160;:"
                         android:gravity="center"
                         android:layout_weight="2" />
+                    <!--<EditText-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:inputType="number"-->
+                    <!--android:ems="10"-->
+                    <!--android:gravity="center"-->
+                    <!--android:id="@+id/Sgrade"-->
+                    <!--android:layout_weight="3"/>-->
 
-                    <EditText
+                    <Spinner
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:inputType="textPersonName"
-                        android:ems="10"
-                        android:gravity="center"
-                        android:id="@+id/Sgrade"
+                        android:id="@+id/Ssgrade"
                         android:layout_weight="3" />
 
                 </LinearLayout>
@@ -212,6 +203,7 @@
                     android:layout_height="match_parent"
                     android:inputType="textPersonName"
                     android:ems="10"
+                    android:hint="YY-MM-DDDD"
                     android:gravity="center"
                     android:id="@+id/Sborn"
                     android:layout_weight="2" />
@@ -262,14 +254,6 @@
                     android:id="@+id/Spface">
                 </Spinner>
 
-                <!--<EditText-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:inputType="textPersonName"-->
-                    <!--android:ems="10"-->
-                    <!--android:gravity="center"-->
-                    <!--android:id="@+id/Sface"-->
-                    <!--android:layout_weight="2" />-->
 
             </LinearLayout>
             <LinearLayout
@@ -355,28 +339,25 @@
             android:layout_weight="1">
 
             <Button
-                android:text="编辑"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/Sedit"
+                android:id="@+id/button_1"
                 android:gravity="center"
                 style="@style/Button_style"
                 android:layout_weight="1" />
 
             <Button
-                android:text="确定"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/Sok"
+                android:id="@+id/button_2"
                 android:gravity="center"
                 style="@style/Button_style"
                 android:layout_weight="1" />
 
             <Button
-                android:text="删除"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/Sdelete"
+                android:id="@+id/button_3"
                 style="@style/Button_style"
                 android:layout_weight="1" />
 
@@ -385,5 +366,4 @@
 
     </LinearLayout>
 
-
-</RelativeLayout>
+</LinearLayout>

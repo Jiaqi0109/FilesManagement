@@ -89,7 +89,7 @@ public class MFragmentPower extends ListFragment {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.mfragment_power, container, false);
+        return inflater.inflate(R.layout.list_view, container, false);
     }
 
 }

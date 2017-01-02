@@ -47,12 +47,6 @@
                 android:textSize="@dimen/text_size"
                 android:layout_weight="1" />
 
-            <Spinner
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/s2014"
-                android:layout_weight="1">
-            </Spinner>
 
             <EditText
                 android:layout_width="match_parent"

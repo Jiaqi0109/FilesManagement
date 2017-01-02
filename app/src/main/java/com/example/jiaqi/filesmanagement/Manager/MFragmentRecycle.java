@@ -53,13 +53,15 @@ public class MFragmentRecycle extends ListFragment {
         builder.setTitle("提示"); //设置标题
         builder.setMessage("请选择操作:"); //设置内容
         builder.setIcon(R.mipmap.ic_launcher);//设置图标，图片id即可
-        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() { //设置确定按钮
+
+        builder.setPositiveButton("彻底删除", new DialogInterface.OnClickListener() { //设置删除按钮
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss(); //关闭dialog
-                Toast.makeText(getActivity(), "确认" + which, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "彻底删除" + which, Toast.LENGTH_SHORT).show();
             }
         });
+
         builder.setNegativeButton("还原", new DialogInterface.OnClickListener() { //设置取消按钮
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -100,7 +102,7 @@ public class MFragmentRecycle extends ListFragment {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.mfragment_recycle,container,false);
+        View view = inflater.inflate(R.layout.list_view,container,false);
         return view;
     }
 
