@@ -1,8 +1,13 @@
 package com.example.jiaqi.filesmanagement.Manager;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.jiaqi.filesmanagement.R;
 
@@ -11,7 +16,6 @@ public class Management extends AppCompatActivity {
     private MFragmentBorrow Fborrow;
     private MFragmentChangepw Fchangepw;
     private MFragmentImport Fimport;
-    private MFragmentInquier Finquier;
     private MFragmentPower Fpower;
     private MFragmentRecycle Frecycle;
 
@@ -57,14 +61,9 @@ public class Management extends AppCompatActivity {
                     transaction.show(Fimport);
                 }
                 break;
-            case 5:
-                if (Finquier == null) {
-                    Finquier = new MFragmentInquier();
-                    transaction.add(R.id.fragment_container2, Finquier);
-                } else {
-                    transaction.show(Finquier);
-                }
-                break;
+
+
+
             case 6:
                 if (Fchangepw == null) {
                     Fchangepw = new MFragmentChangepw();
@@ -86,9 +85,6 @@ public class Management extends AppCompatActivity {
         }
         if (Fimport != null) {
             transaction.hide(Fimport);
-        }
-        if (Finquier != null) {
-            transaction.hide(Finquier);
         }
         if (Fpower != null) {
             transaction.hide(Fpower);

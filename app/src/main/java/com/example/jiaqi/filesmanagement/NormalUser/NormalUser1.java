@@ -17,11 +17,12 @@ public class NormalUser1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_normal_user1);
+        setContentView(R.layout.fileview_cannot_change);
 
         activity_NU1 = this;
 
-        Bt_setting = (Button)findViewById(R.id.Ssetting);
+        Bt_setting = (Button)findViewById(R.id.button2);
+        Bt_setting.setText("设置");
         Bt_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,7 +31,8 @@ public class NormalUser1 extends AppCompatActivity {
             }
         });
 
-        Bt_exit = (Button)findViewById(R.id.Sexit);
+        Bt_exit = (Button)findViewById(R.id.button1);
+        Bt_exit.setText("退出");
         Bt_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

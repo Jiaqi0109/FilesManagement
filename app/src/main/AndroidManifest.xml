@@ -31,10 +31,12 @@
         <activity android:name=".Manager.Inquier_son" />
         <activity android:name=".NormalUser.NormalUser1" />
         <activity android:name=".NormalUser.NormalUser2" />
-        <activity android:name=".NormalUser.NormalBorrow" />
-        <activity android:name=".NormalUser.NormalChangepw" />
+        <activity android:name=".NormalUser.Borrow" />
+        <activity android:name=".NormalUser.NormalBorrowManage" />
         <activity android:name=".Others.OtherUser" />
-        <activity android:name=".ChangePassword"></activity>
+        <activity android:name=".ChangePassword" />
+        <activity android:name=".Others.OthersBorrow" />
+        <activity android:name=".Others.OthersBorrowManage"></activity>
     </application>
 
 </manifest>

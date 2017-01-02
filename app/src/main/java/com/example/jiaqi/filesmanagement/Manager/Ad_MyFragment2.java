@@ -1,12 +1,16 @@
 package com.example.jiaqi.filesmanagement.Manager;
 
 import android.app.Fragment;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.jiaqi.filesmanagement.MainLogin;
 import com.example.jiaqi.filesmanagement.Manager.Add;
@@ -104,11 +108,25 @@ public class Ad_MyFragment2 extends Fragment{
         bt_inquire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Management.class);
-                Bundle bundle=new Bundle();
-                bundle.putInt("i", 5);
-                intent.putExtras(bundle);
-                startActivity(intent);
+
+                final EditText editText = new EditText(getActivity());
+                AlertDialog.Builder inputDialog =
+                        new AlertDialog.Builder(getActivity());
+                inputDialog.setTitle("请输入要查询的学号").setView(editText);
+                inputDialog.setPositiveButton("确定",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(getActivity(),
+                                        editText.getText().toString(),
+                                        Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getActivity(), Inquier_son.class);
+                                Bundle bundle=new Bundle();
+                                bundle.putInt("学号", which);
+                                intent.putExtras(bundle);
+                                startActivity(intent);
+                            }
+                        }).show();
             }
         });
 

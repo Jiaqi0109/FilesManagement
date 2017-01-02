@@ -1,21 +1,13 @@
-package com.example.jiaqi.filesmanagement.Manager;
+package com.example.jiaqi.filesmanagement.Others;
 
-import android.app.Activity;
-import android.content.res.TypedArray;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.Spinner;
 
 import com.example.jiaqi.filesmanagement.R;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Inquier_son extends Activity{
+public class OthersBorrow extends AppCompatActivity {
     private Button bt1, bt2;
 
     @Override
@@ -33,13 +25,12 @@ public class Inquier_son extends Activity{
         });
 
         bt2 = (Button)findViewById(R.id.button2);
-        bt2.setText("下一个");
+        bt2.setText("归还");
         bt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
             }
         });
-
     }
 }
