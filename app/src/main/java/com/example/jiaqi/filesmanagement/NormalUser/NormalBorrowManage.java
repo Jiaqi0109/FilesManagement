@@ -2,6 +2,8 @@ package com.example.jiaqi.filesmanagement.NormalUser;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,6 +24,13 @@ import java.util.regex.Pattern;
 
 public class NormalBorrowManage extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
+    Handler handler1= new Handler() {
+        public void handleMessage(android.os.Message msg){
+            if(msg.what == 0x123){
+                Lv.setBackgroundColor(Color.rgb(213,0,0));
+            }
+        }
+    };
     static Activity activity_NB;
     private ListView Lv;
     private String str, str2 = "你是个傻逼";
@@ -93,6 +102,7 @@ public class NormalBorrowManage extends AppCompatActivity implements AdapterView
                     .setMessage(str2 )
                     .setPositiveButton("确定" ,  null )
                     .show();
+            new MyFlush().start();
         }
         else{
             Intent intent = new Intent(this, Borrow.class);
@@ -100,6 +110,7 @@ public class NormalBorrowManage extends AppCompatActivity implements AdapterView
             bundle.putInt("学号", i);
             intent.putExtras(bundle);
             startActivity(intent);
+            new MyFlush().start();
         }
     }
 
@@ -124,6 +135,16 @@ public class NormalBorrowManage extends AppCompatActivity implements AdapterView
             }
         }
         return slashMatcher.start();
+    }
+    public class MyFlush extends Thread{
+        public void run(){
+            try{
+                Thread.sleep(200);
+            } catch (InterruptedException e){
+                e.printStackTrace();
+            }
+            handler1.sendEmptyMessage(0x123);
+        }
     }
 }
 

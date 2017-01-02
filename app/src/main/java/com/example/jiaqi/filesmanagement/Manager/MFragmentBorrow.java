@@ -3,16 +3,20 @@ package com.example.jiaqi.filesmanagement.Manager;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.jiaqi.filesmanagement.R;
@@ -27,11 +31,21 @@ import java.util.Map;
  * A simple {@link Fragment} subclass.
  */
 public class MFragmentBorrow extends ListFragment {
-    public void onCreate(Bundle savedInstanceState) {
 
+    Handler handler1= new Handler() {
+        public void handleMessage(android.os.Message msg){
+            if(msg.what == 0x123){
+                /*Lv.setBackgroundColor(Color.rgb(213,0,0));*/
+                //重新载入数据操作
+            }
+        }
+    };
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        /*Lv=(ListView)getView().findViewById(R.id.list1);*/
         final String[] from = new String[] {"申请人", "学号","申请日期","借阅原因"};
         final int[] to = new int[] {R.id.recycle_text1, R.id.recycle_text2, R.id.recycle_text3, R.id.recycle_text4};
-        super.onCreate(savedInstanceState);
         SimpleAdapter bo_adapter = new SimpleAdapter(
                 this.getActivity(), getSimpleData(),
                 R.layout.list_item_borrow, from, to);
@@ -56,6 +70,7 @@ public class MFragmentBorrow extends ListFragment {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss(); //关闭dialog
+                new MyFlush().start();
                 Toast.makeText(getActivity(), "确认同意" + which, Toast.LENGTH_SHORT).show();
             }
         });
@@ -73,6 +88,7 @@ public class MFragmentBorrow extends ListFragment {
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+                                new MyFlush().start();
                                 Toast.makeText(getActivity(),
                                         editText.getText().toString(),
                                         Toast.LENGTH_SHORT).show();
@@ -116,6 +132,16 @@ public class MFragmentBorrow extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.list_view,container,false);
         return view;
+    }
+    public class MyFlush extends Thread{
+        public void run(){
+            try{
+                Thread.sleep(200);
+            } catch (InterruptedException e){
+                e.printStackTrace();
+            }
+            handler1.sendEmptyMessage(0x123);
+        }
     }
 
 }
