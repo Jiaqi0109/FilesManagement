@@ -120,7 +120,7 @@ public class Ad_MyFragment2 extends Fragment{
                                 Toast.makeText(getActivity(),
                                         editText.getText().toString(),
                                         Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getActivity(), Inquier_son.class);
+                                Intent intent = new Intent(getActivity(), Administrator2.class);
                                 Bundle bundle=new Bundle();
                                 bundle.putInt("学号", which);
                                 intent.putExtras(bundle);

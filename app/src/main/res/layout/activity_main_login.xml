@@ -8,7 +8,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/main"
     tools:context="com.example.jiaqi.filesmanagement.MainLogin">
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -16,7 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout2">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -24,24 +27,24 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:text="@string/user"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:text="@string/sign_in"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:id="@+id/user"
                 android:textSize="@dimen/text_size"
-                android:textColor="@color/colorPrimary"
-                android:gravity="center_horizontal"
-                android:layout_weight="1" />
+                android:textColor="@color/text_white"
+                android:gravity="center"
+                android:layout_weight="2" />
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:hint="@string/username"
                 android:ems="10"
                 android:maxLength="10"
+                android:textColor="@color/text_white"
                 android:id="@+id/username"
-                android:layout_weight="1" />
+                android:layout_weight="5" />
 
         </LinearLayout>
 
@@ -52,67 +55,88 @@
 
             <TextView
                 android:text="@string/pw"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:id="@+id/pw"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:textSize="@dimen/text_size"
-                android:textColor="@color/colorPrimary"
-                android:layout_weight="1" />
+                android:textColor="@color/text_white"
+                android:layout_weight="2" />
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="@string/pwname"
                 android:ems="10"
                 android:id="@+id/pwname"
-                android:layout_weight="1" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:text="@string/sign_up"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/sign_up"
-                style="@style/Button_style"
-                android:layout_weight="1"
-                />
-
-
-            <Button
-                android:text="@string/sign_in"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/sign_in"
-                style="@style/Button_style"
-                android:layout_weight="1" />
+                android:textColor="@color/text_white"
+                android:layout_weight="5" />
         </LinearLayout>
 
 
     </LinearLayout>
 
-    <Button
-        android:text="Normal"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/normal"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/linearLayout2"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true">
 
-    <Button
-        android:text="Others"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/others"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        <Button
+            android:text="立即登录"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/sign_in"
+            android:textSize="20sp"
+            android:background="#00000000"
+            android:textColor="@color/text_white"
+            android:textStyle="bold"
+            android:layout_weight="5" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="修改密码&#160;&#160;"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/change"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:background="#00000000"
+                android:textColor="@color/text_white"
+                />
+
+            <Button
+                android:text="|&#160;&#160;立即注册"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/sign_up"
+                android:gravity="left"
+                android:background="#00000000"
+                android:textColor="@color/text_white"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>

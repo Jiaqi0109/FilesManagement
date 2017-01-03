@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/rd_group"
-        android:background="@color/text_white">
+        android:background="@drawable/back">
 
 
     </FrameLayout>

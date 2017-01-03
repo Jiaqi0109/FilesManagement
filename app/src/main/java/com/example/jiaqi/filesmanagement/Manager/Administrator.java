@@ -10,7 +10,7 @@ import android.widget.RadioGroup;
 import com.example.jiaqi.filesmanagement.R;
 
 
-public class Administrator extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener{
+public class Administrator extends Activity implements RadioGroup.OnCheckedChangeListener{
 
     static Activity activity_Ad;
     private RadioGroup rpTab;

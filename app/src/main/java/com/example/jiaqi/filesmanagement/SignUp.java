@@ -1,5 +1,6 @@
 package com.example.jiaqi.filesmanagement;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,7 +15,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class SignUp extends Activity implements AdapterView.OnItemSelectedListener {
 
     private Button btsg;
     private List<String> list;

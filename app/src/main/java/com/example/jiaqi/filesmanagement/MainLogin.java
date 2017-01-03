@@ -14,7 +14,7 @@ import com.example.jiaqi.filesmanagement.Others.OtherUser;
 
 public class MainLogin extends Activity {
 
-    private Button btup, btin, bt1, bt2;
+    private Button btup, btin, btch;
     private TextView textuser;
     private TextView textpw;
 
@@ -32,8 +32,19 @@ public class MainLogin extends Activity {
         btin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainLogin.this, Administrator.class);
-                startActivity(intent);
+                if(textuser.getText().toString().trim().equals("1")) {
+                    Intent intent = new Intent(MainLogin.this, Administrator.class);
+                    startActivity(intent);
+                }else if(textuser.getText().toString().trim().equals("2")){
+                    Intent intent = new Intent(MainLogin.this, NormalUser1.class);
+                    startActivity(intent);
+                }else if(textuser.getText().toString().trim().equals("3")){
+                    Intent intent = new Intent(MainLogin.this, OtherUser.class);
+                    startActivity(intent);
+                }else{
+                    Intent intent = new Intent(MainLogin.this, Administrator.class);
+                    startActivity(intent);
+                }
 
                 finish();
             }
@@ -52,26 +63,14 @@ public class MainLogin extends Activity {
         });
 
         /*
-         * 临时按钮
+         * 修改密码跳转
          */
-        
-
-        bt1 = (Button) findViewById(R.id.normal);
-        bt1.setOnClickListener(new View.OnClickListener() {
+        btch = (Button) findViewById(R.id.change);
+        btch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainLogin.this, NormalUser1.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        bt2 = (Button) findViewById(R.id.others);
-        bt2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainLogin.this, OtherUser.class);
-                startActivity(intent);
-                finish();
+                Intent intent = new Intent(MainLogin.this, ChangePassword.class);
+                startActivityForResult(intent, 1);
             }
         });
     }
