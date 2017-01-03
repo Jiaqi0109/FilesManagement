@@ -25,7 +25,7 @@ public class OthersBorrowManage extends AppCompatActivity implements AdapterView
     static Activity activity_OB;
 
     private ListView Lv;
-    private String str, str2 = "你是个傻逼";
+    private String str, str2 = "拒绝借阅。";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class OthersBorrowManage extends AppCompatActivity implements AdapterView
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("学号", "001");
         map.put("借阅日期", "2016.1.1");
-        map.put("借阅原因", "因为我是傻逼");
+        map.put("借阅原因", "需求");
         map.put("处理时间", "2017.1.1");
         map.put("是否同意借阅", "true");
         list3.add(map);
@@ -60,7 +60,7 @@ public class OthersBorrowManage extends AppCompatActivity implements AdapterView
         map = new HashMap<String, Object>();
         map.put("学号", "002");
         map.put("借阅日期", "2016.1.1");
-        map.put("借阅原因", "因为我是傻逼");
+        map.put("借阅原因", "需求");
         map.put("处理时间", "2017.1.1");
         map.put("是否同意借阅", "false");
         list3.add(map);
@@ -68,7 +68,7 @@ public class OthersBorrowManage extends AppCompatActivity implements AdapterView
         map = new HashMap<String, Object>();
         map.put("学号", "003");
         map.put("借阅日期", "2016.1.1");
-        map.put("借阅原因", "因为我是傻逼");
+        map.put("借阅原因", "需求");
         map.put("处理时间", "2017.1.1");
         map.put("是否同意借阅", "true");
         list3.add(map);

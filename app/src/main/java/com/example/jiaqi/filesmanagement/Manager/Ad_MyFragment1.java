@@ -50,18 +50,18 @@ public class Ad_MyFragment1 extends ListFragment {
         List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 
         Map<String, Object> map = new HashMap<String, Object>();
-        map.put("姓名", "张三");
-        map.put("学号", "001");
+        map.put("姓名", "李明");
+        map.put("学号", "2014000001");
         list.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("姓名", "李四");
-        map.put("学号", "002");
+        map.put("姓名", "张红");
+        map.put("学号", "2014000002");
         list.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("姓名", "王五");
-        map.put("学号", "003");
+        map.put("姓名", "王强");
+        map.put("学号", "2014000003");
         list.add(map);
 
         return list;

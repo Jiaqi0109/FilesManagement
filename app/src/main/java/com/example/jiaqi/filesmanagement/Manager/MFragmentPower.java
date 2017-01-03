@@ -71,17 +71,17 @@ public class MFragmentPower extends ListFragment {
         List<Map<String, Object>> list1 = new ArrayList<Map<String, Object>>();
 
         Map<String, Object> map = new HashMap<String, Object>();
-        map.put("姓名", "张三");
+        map.put("姓名", "李明");
         map.put("类型", "管理员");
         list1.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("姓名", "李四");
+        map.put("姓名", "张红");
         map.put("类型", "学生");
         list1.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("姓名", "王五");
+        map.put("姓名", "王强");
         map.put("类型", "学生");
         list1.add(map);
 

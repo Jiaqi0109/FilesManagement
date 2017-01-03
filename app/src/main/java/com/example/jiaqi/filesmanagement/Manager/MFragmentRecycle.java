@@ -78,22 +78,22 @@ public class MFragmentRecycle extends ListFragment {
         List<Map<String, Object>> list1 = new ArrayList<Map<String, Object>>();
 
         Map<String, Object> map = new HashMap<String, Object>();
-        map.put("姓名", "张三");
-        map.put("学号", "001");
+        map.put("姓名", "李明");
+        map.put("学号", "2014000001");
         map.put("用户名", "方楠");
         map.put("被删日期", "2017.1.1");
         list1.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("姓名", "李四");
-        map.put("学号", "002");
+        map.put("姓名", "张红");
+        map.put("学号", "2014000002");
         map.put("用户名", "方楠");
         map.put("被删日期", "2017.1.1");
         list1.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("姓名", "王五");
-        map.put("学号", "003");
+        map.put("姓名", "王强");
+        map.put("学号", "2014000003");
         map.put("用户名", "方楠");
         map.put("被删日期", "2017.1.1");
         list1.add(map);

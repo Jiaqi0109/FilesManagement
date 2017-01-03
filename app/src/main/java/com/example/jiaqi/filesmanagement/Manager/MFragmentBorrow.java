@@ -79,7 +79,6 @@ public class MFragmentBorrow extends ListFragment {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                Toast.makeText(getActivity(), "因为你是个傻逼" , Toast.LENGTH_SHORT).show();
                 final EditText editText = new EditText(getActivity());
                 AlertDialog.Builder inputDialog =
                         new AlertDialog.Builder(getActivity());
@@ -106,24 +105,24 @@ public class MFragmentBorrow extends ListFragment {
         List<Map<String, Object>> list2 = new ArrayList<Map<String, Object>>();
 
         Map<String, Object> map = new HashMap<String, Object>();
-        map.put("申请人", "张三");
-        map.put("学号", "001");
+        map.put("申请人", "李明");
+        map.put("学号", "2014000001");
         map.put("申请日期", "2017.1.1");
-        map.put("借阅原因", "因为嘉琪2");
+        map.put("借阅原因", "因为需要");
         list2.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("申请人", "李四");
-        map.put("学号", "002");
+        map.put("申请人", "张红");
+        map.put("学号", "2014000002");
         map.put("申请日期", "2017.1.1");
-        map.put("借阅原因", "因为嘉琪2");
+        map.put("借阅原因", "因为需要");
         list2.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("申请人", "王五");
-        map.put("学号", "003");
+        map.put("申请人", "王强");
+        map.put("学号", "2014000003");
         map.put("申请日期", "2017.1.1");
-        map.put("借阅原因", "因为嘉琪2");
+        map.put("借阅原因", "因为需要");
         list2.add(map);
 
         return list2;
